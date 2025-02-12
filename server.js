@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 
-console.log(req.body.message);
+
 app.post('/',(req, res)=>{
   
   const transporter = nodeMailer.createTransport({
