@@ -13,7 +13,7 @@ app.use(cors());
 
 console.log(req.body.message);
 app.post('/',(req, res)=>{
-  console.log(req.body);
+  
   const transporter = nodeMailer.createTransport({
     service: 'gmail',
     auth:{
