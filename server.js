@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const nodeMailer = require('nodemailer');
+app.use(express.static('public'));
+
 
 const PORT = process.env.PORT || 5000;
 
@@ -26,7 +28,7 @@ const mailOptions = {
   replyTo: req.body.email,
   to: 'a88933513@gmail.com',
   subject: `Message from ${req.body.name}: ${req.body.email}`,
-  text: `Hi On Stage Studio, ${req.body.name} wants to schedule a show on ${req.body.date}, he left a message: ${req.body.message}.`
+  text: `Hi On Stage Studio, ${req.body.contact} from ${req.body.name} camp,  wants to schedule a show on ${req.body.date}, his phone number is ${req.body.phone}he left a message: ${req.body.message}.`
 };
 transporter.sendMail(mailOptions, (error, info)=>{
   if(error){
