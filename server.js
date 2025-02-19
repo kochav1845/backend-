@@ -26,7 +26,7 @@ app.post('/',(req, res)=>{
 const mailOptions = {
   from: 'a88933513@gmail.com',
   replyTo: req.body.email,
-  to: 'a88933513@gmail.com',
+  to: 'onstagestudioshow@gmail.com',
   subject: `Message from ${req.body.name}: ${req.body.email}`,
   text: `Hi On Stage Studio, ${req.body.contact} from ${req.body.name} camp,  wants to schedule a show on ${req.body.date}, his phone number is ${req.body.phone}he left a message: ${req.body.message}.`
 };
